@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Название страницы</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
+ <!-- подключение стилей -->
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+        <div class="row items-center">
+        <div class="header-logo">
+            <img src="./img/header-logo.svg" alt="Header logo">
+        </div>
+        <nav>
+            <ul class="row header-row">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Про курс</a></li>
+                <li><a href="#">Об авторе</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Частые вопросы</a></li>
+            </ul>
+        </nav>
+        <button class="header-registerButton">Записаться<i class="fa-solid fa-arrow-right header-registerButtonArrow"></i></button>
+    </div>
+    </div>
+  </header>
+  <section class="intro">
+    <div class="wrapper">
+        <div class="column">
+            <h1 class="intro-title">Почему вы <span class="bold">cнова и снова</span> повторяете похожий сценарий в отношениях? <span class="bold cursive">И как это изменить?</span></h1>
+            <div class="row items-center">
+                <div class="intro-image">
+                    <img src="./img/intro-image.png" alt="intro-image">
+                </div>
+                <div class="column intro-textBlock">
+                    <p>Курс, который покажет, почему вы выбираете «не тех» и научит, как выйти из замкнутого круга боли, чтобы построить здоровые отношения на десятилетия.</p>
+                    <p>Если вы устали от разочарований, если в отношениях вы теряете себя, если вас преследует чувство тревоги, если вы долгое время одиноки – это не просто невезение.</p>
+                    <p class="bold">Это «сценарий». И его можно переписать!</p>
+                    <button class="intro-registerButton">Записаться сейчас<i class="fa-solid fa-arrow-right intro-registerButtonArrow"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <section class="quizzTest">
+    <div class="wrapper quizzTest-wrapper">
+        <div class="row">
+            <div class="column quizzTest-titles">
+                <h2>Какая скрытая программа мешает вам быть счастливой в отношениях?</h2>
+                <p>Ответьте на эти три вопроса и узнайте, какой сценарий отношений вы проживаете</p>
+            </div>
+            <div class="column quizzTest-questions content-between">
+                <p>Как обычно начинаются ваши отношения?</p>
+                <button class="register-button">А) Стремительно и страстно — часто теряю голову</button>
+                <button class="register-button">Б) Осторожно, долго присматриваюсь — боюсь снова ошибиться</button>
+                <button class="register-button">В) Незаметно втягиваюсь — партнёр выбирает меня, а не я его</button>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="eligibility">
+        <div class="wrapper">
+            <div class="row">
+                <div class="eligibility-title">
+                    <h2>Этот курс для вас, если</h2>
+                </div>
+                <div class="eligibility-buttons">
+                    <div class="row eligibility-row">
+                        <div class="eligibility-card column justify-center">
+                            <div class="row course-benefit-card__header">
+                                <span class="course-benefit-card__number">01.</span>
+                                <div class="eligibility-card-image">
+                                    <img src="./img/eligibility/01.svg" alt="" />
+                                </div>
+                            </div>
+                            <p class="course-benefit-card__text">
+                                Вы <strong>постоянно попадаете в отношения,</strong>в которых страдаете
+                            </p>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="row course-benefit-card__header">
+                                <span class="course-benefit-card__number">02.</span>
+                                <div class="eligibility-card-image">
+                                    <img src="./img/eligibility/02.svg" alt="" />
+                                </div>
+                            </div>
+                            <p class="course-benefit-card__text">
+                                Вас тянет не к тем - <strong>эмоционально холодным, незрелым или даже токсичным</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row eligibility-row">
+                        <div class="eligibility-card">
+                            <div class="row course-benefit-card__header">
+                                <span class="course-benefit-card__number">03.</span>
+                                <div class="eligibility-card-image">
+                                    <img src="./img/eligibility/03.svg" alt="" />
+                                </div>
+                            </div>
+                            <p class="course-benefit-card__text">
+                                Вы боитесь <strong>одиночества и цепляетесь</strong> за отношения даже когда все <strong>внутри кричит «беги!»</strong>
+                            </p>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="row course-benefit-card__header">
+                                <span class="course-benefit-card__number">04.</span>
+                                <div class="eligibility-card-image">
+                                    <img src="./img/eligibility/04.svg" alt="" />
+                                </div>
+                            </div>
+                            <p class="course-benefit-card__text">
+                                Вы <strong>долгое время не можете впустить в сердце любовь</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row eligibility-row">
+                        <div class="eligibility-card">
+                            <div class="row course-benefit-card__header">
+                                <span class="course-benefit-card__number">05.</span>
+                                <div class="eligibility-card-image">
+                                    <img src="./img/eligibility/05.svg" alt="" />
+                                </div>
+                            </div>
+                            <p class="course-benefit-card__text">
+                                <strong>Потеряли веру,</strong> что может быть по-другому
+                            </p>
+                        </div>
+                        <div class="eligibility-card">
+                            <div class="row course-benefit-card__header">
+                                <span class="course-benefit-card__number">06.</span>
+                                <div class="eligibility-card-image">
+                                    <img src="./img/eligibility/06.svg" alt="" />
+                                </div>
+                            </div>
+                            <p class="course-benefit-card__text">
+                                <strong>Хотите по-другому, но не знаете как</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="aboutCourse">
+        <div class="wrapper">
+            <div class="row">
+                <div class="aboutCourse-title">
+                    <p>О чём этот курс</p>
+                </div>
+                <div class="aboutCourse-text">
+                    <h2>Это не просто об отношениях</h2>
+                    <p></p>
+                </div>
+                <section class="course-message">
+  <h2 class="course-message__title">Это не просто об отношениях</h2>
+
+  <div class="course-message__content">
+    <img src="./img/about.svg" alt="Girl stitching heart" class="course-message__image" />
+
+    <p>
+      Этот курс о вас! Про ваши внутренние сценарии, травмы, потребности и то, как они управляют вашей жизнью.
+      <br /><br />
+      Вы научитесь понимать, чего на самом деле хотите, и как создать здоровые, наполненные отношения – сначала с собой, потом с другим.
+    </p>
+  </div>
+</section>
+            </div>
+        </div>
+    </section> -->
+    <section class="program">
+        <div class="wrapper">
+            <div class="column">
+                <h2 class="program-title">Программа курса</h2>
+                <div class="program-lessons">
+                    <div class="program-lesson">
+                        <div class="row items-center">
+                            <div class="program-lesson-title">
+                                <h3>Урок 01.</h3>
+                                <p>Что такое сценарий отношений и какими они бывают</p>
+                            </div>
+                            <div class="program-lesson-text">
+                                <p>Как понять, что вы уже внутри определенного сценария? <br/>И стоит ли его менять?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-lesson">
+                        <div class="row items-center">
+                            <div class="program-lesson-title">
+                                <h3>Урок 02.</h3>
+                                <p>Почему вы выбрали именно этого партнера</p>
+                            </div>
+                            <div class="program-lesson-text">
+                                <p>Как детский опыт и отношения с родителями влияют на наш выбор партнера? И почему вы тянетесь к тем, кто причиняет вам боль? </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-lesson">
+                        <div class="row items-center">
+                            <div class="program-lesson-title">
+                                <h3>Урок 03.</h3>
+                                <p>Мои потребности в отношениях</p>
+                            </div>
+                            <div class="program-lesson-text">
+                                <p>Зачем вам на самом деле нужны отношения? Чтобы любить или чтобы закрыть пустоту?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-lesson">
+                        <div class="row items-center">
+                            <div class="program-lesson-title">
+                                <h3>Урок 04.</h3>
+                                <p>Отношения с собой – фундамент всего</p>
+                            </div>
+                            <div class="program-lesson-text">
+                                <p>Самоценность, свои желания и цели без чувства вины. Как сочетаются собственные границы и самоотдача в отношениях?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-lesson">
+                        <div class="row items-center">
+                            <div class="program-lesson-title">
+                                <h3>Урок 05.</h3>
+                                <p>Как выстраивать здоровые отношения</p>
+                            </div>
+                            <div class="program-lesson-text">
+                                <p>Из чего на самом деле состоят счастливые пары? Пошаговая диагностика + простые инструменты</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-lesson">
+                        <div class="row items-center">
+                            <div class="program-lesson-title">
+                                <h3>Урок 06.</h3>
+                                <p>Навыки, без которых невозможны счастливые отношения</p>
+                            </div>
+                            <div class="program-lesson-text">
+                                <p>Эмоции, навыки и конкретные действия, которые трансформируют, развивают и укрепляют отношения</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="program-button">
+                    <p>Подробнее о содержании</p><img src="./img/arrow-top-right.svg" alt="arrow" /></button>
+            </div>
+        </div>
+  </section>
+  <section class="aboutMe">
+    <div class="wrapper">
+        <div class="column">
+            <div class="row">
+                <h2 class="aboutMe-title">Обо мне</h2>
+                <p class="aboutMe-text">Добрый день!</p>
+            </div>
+            <h3 class="aboutMe-text">Меня зовут Светлана, <em>я практикующий психолог</em></h3>
+            <div class="row aboutMe-image-row">
+                <div class="aboutMe-image"><img src="./img/me.jpg" alt="Svetlana"></div>
+                <div class="column aboutMe-image-text">
+                    <p>Мой путь в психологии отношений начался с интереса к человеческой душе еще в подростковом возрасте и с тех пор я постоянно учусь, исследую и помогаю другим находить дорогу к себе, к гармонии с собой и в паре. Моя практика включает классическую психологию, психосоматику, тарологию, нумерологию и НЛП. </p>
+                    <p>Я точно знаю: счастье начинается с честного диалога с самим собой.</p>
+                    <p>И этот курс – результат моего многолетнего практического опыта, накопленных знаний и моей веры в то, что каждая женщина можете переписать свой сценарий отношений и построить жизнь, полную любви. </p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+            <div class="row aboutMe-believe-row">
+                <div class="aboutMe-believeBlock">
+                    <div class="column items-center">
+                        <p>Любовь - это не только про эмоции, а про сознательный выбор каждый день</p>
+                        <div class="believeBlock-image">
+                            <img src="./img/aboutMe/love.svg" alt="love">
+                        </div>
+                    </div>
+                </div>
+                <div class="aboutMe-believeBlock">
+                    <div class="column items-center">
+                        <p>Крепкий союз – это уважение к пространству партнера</p>
+                        <div class="believeBlock-image">
+                            <img src="./img/aboutMe/union.svg" alt="love">
+                        </div>
+                    </div>
+                </div>
+                <div class="aboutMe-believeBlock">
+                    <div class="column items-center">
+                        <p>Честность – это умение видеть друг друга настоящими</p>
+                        <div class="believeBlock-image">
+                            <img src="./img/aboutMe/honesty.svg" alt="love">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="certificate-carousel">
+                <div>dsfaf</div>
+                <div>dsfaf</div>
+                <div>dsfaf</div>
+                <div>dsfaf</div>
+                <div>dsfaf</div>
+            </div> -->
+        </div>
+    </div>
+  </section>
+  <!-- <section class="results">"
+    <div class="wrapper">
+        <div class="column">
+            <h2 class="results-title">Результаты после курса</h2>
+            <div class="row">
+                <div class="resultsBlock-image">
+                    <div class="results-image">
+                        <img src="./img/results-girl.svg" alt="girl">
+                    </div>
+                </div>
+                <div class="resultsBlock-text column content-end">
+                    <div class="results-block">
+                        <p>Перестанете попадать в <i>разрушительные сценарии</i></p>
+                    </div>
+                    <div class="results-block">
+                        <p>Научитесь распознавать свои настоящие желания и чувства</p>
+                    </div>
+                    <div class="results-block">
+                        <p>Начнете строить опору в себе, а не искать её в партнёре</p>
+                    </div>
+                    <div class="results-block">
+                        <p>Узнаете, что для вас значит любовь и как не размениваться на меньшее</p>
+                    </div>
+                    <div class="results-block">
+                        <p>Будете готовы к отношениям, которые питают, а не разрушают</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>" -->
+  <section class="courseDifference">
+    <div class="wrapper">
+        <div class="column">
+            <h2 class="courseDifference-title">Чем отличается этот курс от других?</h2>
+            <div class="courseDifference-details">
+                <div class="row courseDifference-row">
+                    <div class="courseDifference-subtitle">
+                        <p>Не поверхностно, а вглубь</p>
+                    </div>
+                    <div class="courseDifference-description">
+                        <p>Многие курсы учат «как понравиться», «как удержать» или «как стать идеальной женщиной». Я не буду учить вас манипулировать. Мы пойдем в корень – к вашему сценарию, к боли, к неосознанным выборам, которые снова и снова приводят к разочарованию.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="courseDifference-details">
+                <div class="row courseDifference-row">
+                    <div class="courseDifference-subtitle">
+                        <p>Про изменения, а не про советы</p>
+                    </div>
+                    <div class="courseDifference-description">
+                        <p>Вы не просто узнаете «что делать» - вы поймете, почему не получалось до этого. Это курс про осознание, трансформацию и личную опору.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="courseDifference-details">
+                <div class="row courseDifference-row">
+                    <div class="courseDifference-subtitle">
+                        <p>Фокус - на отношениях с собой</p>
+                    </div>
+                    <div class="courseDifference-description">
+                        <p>Пока вы не в ладу с собой - в отношениях будет пусто, тревожно и больно. Курс поможет выстроить здоровые отношения с собой и уже на этой основе строить близость с партнёром.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="courseDifference-details">
+                <div class="row courseDifference-row">
+                    <div class="courseDifference-subtitle">
+                        <p>Вы не останетесь с вопросами один на один</p>
+                    </div>
+                    <div class="courseDifference-description">
+                        <p>Каждое занятие - с тестами, упражнениями и инструментами, которые можно применить сразу. Это не теория, это путь.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="courseDifference-details">
+                <div class="row courseDifference-row">
+                    <div class="courseDifference-subtitle">
+                        <p>Сценарий - как карта к себе</p>
+                    </div>
+                    <div class="courseDifference-description">
+                        <p>Вы узнаете свой сценарий отношений, поймёте, где он возник, и главное - как его изменить. Без этого любые советы не работают.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  <!-- <section class="feedbacks">
+    <div class="wrapper">
+        <div class="column">
+            <h2 class="feedbacks-title">Отзывы выпускников</h2>
+            <div class="feedbacks-carousel">
+                <div class="feedbacks-carousel-item">
+                    <div class="column">
+                        <div class="row">
+                            <img src="https://via.placeholder.com/50x50" alt="photo" class="feedbacks-carousel-item-photo">
+                            <p></p>
+                        </div>
+                        <p></p>
+                        <button>Подробнее</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- </section> -->
+    <section class="formatPricing">
+        <div class="wrapper">
+            <div class="column">
+                <div class="row">
+                    <h2 class="formatPricing-title">Формат и стоимость</h2>
+                    <div class="formatPricing-block">
+                        <div class="column">
+                            <div class="row formatPricing-block-content">
+                                <div class="content-program">
+                                    <h3>Вся программа:</h3>
+                                    <ul>
+                                        <li>6 видеоуроков с детальным объяснением</li>
+                                        <li>Практики и задания после каждого урока</li>
+                                        <li>Практика для исследования себя и своих отношений</li>
+                                        <li>2 бонусных урока </li>
+                                        <li>Доступ навсегда</li>
+                                        <li>Доступ к закрытому сообществу. Поддержка, вдохновение, возможность делиться инсайтами и задавать вопросы</li>
+                                    </ul>
+                                </div>
+                                <div class="content-format">
+                                    <h3>Формат:</h3>
+                                    <ul>
+                                        <li>онлайн</li>
+                                        <li>проходишь в удобном ритме</li>
+                                        <li>доступ сразу после оплаты</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="formatPricing-block-pricing">
+                                <div class="column pricing-block">
+                                    <h3>всего<br/><b>790 грн</b></h3>
+                                    <p>3500 грн</p>
+                                    <button>Купить со скидкой <i class="fa-solid fa-arrow-right intro-registerButtonArrow"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="formatPricing-text">Начните с главного <em>- с себя. Сценарий можно изменить. И вы заслуживаете любить и быть любимой</em></p>
+            </div>
+        </div>
+    </section>
+  <section class="faq">
+    <div class="wrapper">
+        <div class="column">
+            <h2 class="faq-title">Часто задаваемые вопросы</h2>
+            <button class="question" onclick="toggleFaq(this)">
+                <div class="row faq-row">
+                    <div class="row faq-question-text">
+                        <p>(01)</p>
+                        <p>А если я давно не в отношениях мне подойдет курс?</p>
+                    </div>
+                    <div class="faq-arrow">
+                        <img src="./img/faq-icon.svg" alt="faq details" id="icon">
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Да. Этот курс не про то, как найти партнёра, а про то, почему вы пока не позволяете себе любить, как впустить любовь в свою жизнь и как подготовить себя к здоровым отношениям.</p>
+                </div>
+            </button>
+            <button class="question" onclick="toggleFaq(this)">
+                <div class="row faq-row">
+                    <div class="row faq-question-text">
+                    <p>(02)</p>
+                    <p>Я сейчас в отношениях, но не уверена, что они здоровые. <br/>Курс поможет понять?</p>
+                    </div>
+                    <div class="faq-arrow">
+                    <img src="./img/faq-icon.svg" alt="faq details">
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Да. Уже с первого урока вы начнете видеть сценарий, в который попали. А дальше поймёте, что именно в этих отношениях вас разрушает, что можно изменить</p>
+                </div>
+            </button>
+            <button class="question" onclick="toggleFaq(this)">
+                <div class="row faq-row">
+                    <div class="row faq-question-text">
+                        <p>(03)</p>
+                        <p>Сколько времени займёт прохождение курса? <br/>Курс поможет понять?</p>
+                    </div>
+                    <div class="faq-arrow">
+                        <img src="./img/faq-icon.svg" alt="faq details">
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Каждый урок - около 15 - 20 минут + время на практики. Вы можете проходить в своём темпе, курс остается с вами навсегда.</p>
+                </div>
+            </button>
+            <button class="question" onclick="toggleFaq(this)">
+                <div class="row faq-row">
+                    <div class="row faq-question-text">
+                        <p>(04)</p>
+                        <p>Курс точно даст результат?</p>
+                    </div>
+                    <div class="faq-arrow">
+                        <img src="./img/faq-icon.svg" alt="faq details">
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Если вы готовы честно посмотреть внутрь себя, выполнять задания и применять практики, то изменения начнутся уже в процессе курса. Это путь не быстрый, но настоящий.</p>
+                </div>
+            </button>
+            <button class="question" onclick="toggleFaq(this)">
+                <div class="row faq-row">
+                    <div class="row faq-question-text">
+                        <p>(05)</p>
+                        <p>Есть ли поддержка во время прохождения курса?</p>
+                    </div>
+                    <div class="faq-arrow">
+                        <img src="./img/faq-icon.svg" alt="faq details">
+                    </div>
+                </div>
+                <div class="faq-answer">
+                    <p>Да. Вы не останетесь один на один с материалом. На протяжении всего курса вы будете получать поддержку в закрытом чате - там я лично отвечаю на вопросы, направляю, помогаю глубже понять себя и пройти сложные моменты. Это безопасное пространство, где вас слышат и поддерживают.</p>
+                    <p>Кроме того, вы сможете увидеть, как переживают подобные этапы другие участницы, а это очень вдохновляет и дает ощущение, что вы не одна на этом пути.</p>
+                    <p>Этот курс - не просто о знаниях. Это о совместной трансформации с поддержкой.</p>
+                </div>
+            </button>
+        </div>
+    </div>
+  </section>
+  <section class="courseResult">
+    <div class="wrapper">
+        <div class="column">
+            <div class="row">
+                <p class="courseResult-subtitle">Курс точно даст результат?</p>
+                <p class="courseResult-textTitle">Если вы готовы честно</p>
+            </div>
+            <p class="courseResult-text">
+                посмотреть внутрь себя, выполнять задания и применять практики, то изменения начнутся уже в процессе курса.
+                <em> Это путь не быстрый, но настоящий</em>
+            </p>
+        </div>
+    </div>
+</section>
+  <footer>
+    <div class="wrapper">
+        <div class="column">
+            <div class="row items-center footer-row">
+                <nav class="footer-nav">
+                    <ul class="row">
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Про меня</a></li>
+                        <li><a href="#">Про курс</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Частые вопросы</a></li>
+                    </ul>
+                </nav>
+                <div class="socials">
+                    <a href="#"><img src="./img/socials/facebook.svg" alt="facebook"></a>
+                    <a href="#"><img src="./img/socials/instagram.svg" alt="instagram"></a>
+                </div>
+            </div>
+            <div class="row items-center">
+                <div class="footer-title">
+                    <h2>Самые важные отношения начинаются с разговора с собой</h2>
+                </div>
+                <div class="footer-image"><img src="./img/footer-img.svg" alt="girl"></div>
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+  </footer>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const feedbacksCarousel = document.querySelector('.feedbacks-carousel');
+        const certificateCarousel = document.querySelector('.certificate-carousel');
+
+        if (feedbacksCarousel && typeof $(feedbacksCarousel).slick === 'function') {
+            $(feedbacksCarousel).slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            arrows: true,
+            autoplay: true,
+            });
+        }
+
+        if (certificateCarousel && typeof $(certificateCarousel).slick === 'function') {
+            $(certificateCarousel).slick({
+            infinite: true,
+            arrows: true,
+            autoplay: true,
+            });
+        }
+    });
+
+    function toggleFaq(element) {
+        const answer = element.querySelector('.faq-answer');
+        const isOpen = element.classList.contains('open');
+
+        if (isOpen) {
+            // COLLAPSE
+            answer.style.maxHeight = answer.scrollHeight + 'px'; // Set to current height first
+            requestAnimationFrame(() => {
+            answer.style.maxHeight = '0';
+            answer.style.padding = '0 0';
+            });
+        } else {
+            // EXPAND
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            answer.style.padding = '0 25px 20px';
+
+            // Optional: after animation, remove max-height to allow for dynamic content
+            answer.addEventListener('transitionend', function handler() {
+            if (element.classList.contains('open')) {
+                answer.style.maxHeight = 'none';
+            }
+            answer.removeEventListener('transitionend', handler);
+            });
+        }
+
+        element.classList.toggle('open');
+    }
+  </script>
+</html>
