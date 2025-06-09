@@ -369,34 +369,61 @@ header {
 
 /* About */
 
-.course-message {
-  background-color: #f5eee7;
-  padding: 60px 40px;
-  font-family: 'Cormorant Garamond', serif;
-  color: #4b2e2e;
-  max-width: 960px;
-  margin: 0 auto;
+.about-course {
+    padding: 0 0 96px 0;
 }
 
-.course-message__title {
-  font-size: 36px;
-  color: #873f3d;
-  margin-bottom: 30px;
-  text-align: center;
+.about-course__title {
+    width: 45%;
 }
 
-.course-message__content {
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: justify;
+.about-course__title > p {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: 0%;
+    color: var(--black-color);
 }
 
-.course-message__image {
-  float: right;
-  width: 180px;
-  height: auto;
-  margin-left: 24px;
-  margin-bottom: 20px;
+.aboutCourse__content {
+    width: 50%;
+}
+
+.aboutCourse__content > h2 {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1;
+    color: var(--main-color);
+    text-indent: 20%;
+}
+
+.course-message__text {
+    width: 50%
+}
+
+.course-message__text > h2 {
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 1;
+    color: var(--main-color);
+    margin-bottom: 24px;
+}
+
+.course-message__text > p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: var(--black-color);
+    font-size: 18px;
+    line-height: 1;
+    text-indent: 20%;
+    margin-bottom: 16px;
+}
+
+.about-course__content > p:last-child {
+    margin-bottom: 0;
 }
 
 /* Program */
@@ -439,7 +466,7 @@ header {
 }
 
 .program__lesson-text {
-    width: 40%;
+    width: 50%;
 }
 
 .program__lesson-header > h3 {
