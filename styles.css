@@ -1328,3 +1328,27 @@ footer {
     width: 100%;
     height: auto;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .wrapper {
+        width: 300px
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .wrapper {
+        width: 720px
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .wrapper {
+        width: 1000px
+    }
+}
+
+@media (min-width: 1440px) {
+    .wrapper {
+        width: 1400px
+    }
+}
