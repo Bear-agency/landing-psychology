@@ -667,7 +667,7 @@ header {
     color: var(--black-color);
     margin-bottom: 16px;
     width: 30%;
-    margin-left: 54%;
+    margin-left: 50%;
 }
 
 .about-me__journey-text:last-of-type {
@@ -682,7 +682,7 @@ header {
 }
 
 .certificate-carousel__image {
-    width: 50%;
+    width: 46%;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -693,7 +693,7 @@ header {
 }
 
 .certificate-carousel__text {
-    width: 46%;
+    width: 50%;
 }
 
 .certificate-carousel__text > p, .certificate-carousel__text > h4 {
@@ -758,11 +758,11 @@ header {
 }
 
 .results__image-wrapper {
-    width: 40%;
+    width: 45%;
 }
 
 .results__text {
-    width: 55%;
+    width: 50%;
 }
 
 .results__image > img {
@@ -789,6 +789,10 @@ header {
     line-height: 1.2;
     color: var(--main-color);
     text-align: center;
+}
+
+.results__item > p > i {
+    font-style: italic;
 }
 
 /* Course difference */
