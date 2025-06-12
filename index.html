@@ -13,7 +13,36 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
+<style>
 
+    .quiz-step {
+      margin-bottom: 30px;
+      display: none;
+    }
+
+    .quiz-step.active {
+      display: block;
+    }
+
+    .quiz-step p {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .quiz-result {
+      padding: 20px;
+      background-color: #dbeaf5;
+      border-left: 5px solid #3498db;
+      display: none;
+      font-size: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+  </style>
  <!-- подключение стилей -->
 </head>
 <body>
@@ -62,10 +91,36 @@
                 <p>Ответьте на эти три вопроса и узнайте, какой сценарий отношений вы проживаете</p>
             </div>
             <div class="column quiz-test__questions content-between">
-                <p>Как обычно начинаются ваши отношения?</p>
+                <!-- <p>Как обычно начинаются ваши отношения?</p>
                 <button class="quiz-test__button">А) Стремительно и страстно — часто теряю голову</button>
                 <button class="quiz-test__button">Б) Осторожно, долго присматриваюсь — боюсь снова ошибиться</button>
-                <button class="quiz-test__button">В) Незаметно втягиваюсь — партнёр выбирает меня, а не я его</button>
+                <button class="quiz-test__button">В) Незаметно втягиваюсь — партнёр выбирает меня, а не я его</button> -->
+                <form id="quizForm">
+                    <div class="quiz-step active" data-step="1">
+                        <p>Как обычно начинаются ваши отношения?</p>
+                        <label class="quiz-test__button"><input type="radio" name="q1" value="A" data-score="1" class="quiz-test__button"> A) Стремительно и страстно</label>
+                        <label class="quiz-test__button"><input type="radio" name="q1" value="B" data-score="2" class="quiz-test__button"> B) Осторожно и долго</label>
+                        <label class="quiz-test__button"><input type="radio" name="q1" value="C" data-score="3"> C) Незаметно втягиваюсь</label>
+                    </div>
+
+                    <div class="quiz-step" data-step="2">
+                        <p>Как вы проявляете чувства?</p>
+                        <label class="quiz-test__button"><input type="radio" name="q2" value="A" data-score="1"> A) Очень открыто</label>
+                        <label class="quiz-test__button"><input type="radio" name="q2" value="B" data-score="2"> B) Сдержанно</label>
+                        <label class="quiz-test__button"><input type="radio" name="q2" value="C" data-score="3"> C) Завишу от партнёра</label>
+                    </div>
+
+                    <div class="quiz-step" data-step="3">
+                        <p>Что вы чаще чувствуете в отношениях?</p>
+                        <label class="quiz-test__button"><input type="radio" name="q3" value="A" data-score="1"> A) Восторг и драйв</label>
+                        <label class="quiz-test__button"><input type="radio" name="q3" value="B" data-score="2"> B) Напряжение и тревогу</label>
+                        <label class="quiz-test__button"><input type="radio" name="q3" value="C" data-score="3"> C) Сомнения и неуверенность</label>
+                    </div>
+                </form>
+                <div id="quizResult" class="row quiz-result" style="display: none;">
+                    <h2 id="quizResultTitle"></h2>
+                    <p id="quizResultText"></p>
+                </div>
             </div>
         </div>
         </div>
@@ -153,7 +208,6 @@
             </div>
         </div>
     </section>
-    <!-- TODO -->
     <section class="about-course">
         <div class="wrapper">
             <div class="row">
@@ -179,7 +233,6 @@
             </div>
         </div>
     </section>
-    <!-- TODO -->
     <section class="program">
         <div class="wrapper">
             <div class="column">
@@ -409,7 +462,7 @@
                         <p>Узнаете, что для <i>вас значит любовь</i> и <i>как не размениваться на меньшее</i></p>
                     </div>
                     <div class="results__item">
-                        <p><i>Будете готовы к отношениям,</i> которые питают, а не разрушают</p>
+                        <p><i>Будете готовы к отношениям,</i> которые наполняют, а не разрушают</p>
                     </div>
                 </div>
             </div>
@@ -762,7 +815,7 @@
                 <nav class="site-footer__nav">
                     <ul class="row">
                         <li><a href="#">Главная</a></li>
-                        <li><a href="#">Про меня</a></li>
+                        <li><a href="#">Об авторе</a></li>
                         <li><a href="#">Про курс</a></li>
                         <li><a href="#">Отзывы</a></li>
                         <li><a href="#">Частые вопросы</a></li>
@@ -862,6 +915,83 @@
 
         element.classList.toggle('open');
     }
+  const results = {
+    AAB: {
+      title: 'Травма эмоциональной нехватки любви',
+      text: 'Ты выбираешь эмоционально холодных и закрытых людей. Так проявляется привычка «доказывать» любовь, заслуживать её. Тебе стоит научиться любить и принимать себя, чтобы перестать ждать признания извне.'
+    },
+    BCC: {
+      title: 'Травма эмоциональной нехватки любви',
+      text: 'Ты выбираешь эмоционально холодных и закрытых людей. Так проявляется привычка «доказывать» любовь, заслуживать её. Тебе стоит научиться любить и принимать себя, чтобы перестать ждать признания извне.'
+    },
+    ABC: {
+      title: 'Травма слияния',
+      text: 'Ты теряешь себя в отношениях, растворяясь в партнёре. Боишься установить личные границы и проявить настоящую себя. Нужно найти контакт со своими настоящими желаниями и начать уважать своё личное пространство'
+    },
+    defaultLow: {
+      title: 'Боишься быть отвергнутой',
+      text: 'Ты боишься отвержения, из-за чего постоянно выбираешь партнёров, с которыми чувствуешь себя ненужной или незначимой. Тебе важно научиться принимать себя, чтобы перестать видеть подтверждения своей неценности в действиях других'
+    },
+    defaultMid: {
+      title: 'Боишься быть брошенной',
+      text: 'Ты сильно привязываешься и боишься одиночества. Это заставляет тебя терпеть даже болезненные отношения. Нужно развить внутреннюю опору, чтобы не бояться оставаться наедине с собой'
+    },
+    defaultHigh: {
+      title: 'Травма предательства',
+      text: 'Тебе трудно доверять, потому что раньше твоё доверие было разрушено. Часто видишь угрозу там, где её нет. Научись видеть разницу между прошлым и настоящим опытом'
+    },
+    highest: {
+      title: 'Травма несправедливости',
+      text: 'Ты болезненно реагируешь на отсутствие баланса и справедливости в отношениях. Это может превращаться в частые конфликты или обиды. Нужно учиться спокойно выражать свои чувства и ожидания'
+    }
+  };
+
+  const answers = {};
+  let currentStep = 1;
+
+  const steps = document.querySelectorAll('.quiz-step');
+  const resultBox = document.getElementById('quizResult');
+  const resultTitle = document.getElementById('quizResultTitle');
+  const resultText = document.getElementById('quizResultText');
+
+  document.querySelectorAll('.quiz-step input[type="radio"]').forEach(input => {
+    input.addEventListener('change', () => {
+      const question = input.name;
+      const value = input.value;
+      const score = parseInt(input.dataset.score);
+      answers[question] = { value, score };
+
+      const currentDiv = input.closest('.quiz-step');
+      currentDiv.classList.remove('active');
+
+      currentStep++;
+      const nextDiv = document.querySelector(`.quiz-step[data-step="${currentStep}"]`);
+      if (nextDiv) {
+        nextDiv.classList.add('active');
+      } else {
+        const comboKey = `${answers.q1.value}${answers.q2.value}${answers.q3.value}`;
+        const totalScore = answers.q1.score + answers.q2.score + answers.q3.score;
+
+        let result;
+        if (results[comboKey]) {
+          result = results[comboKey];
+        } else {
+          if (totalScore === 3 && totalScore <= 4) result = results.defaultLow;
+          else if (totalScore >= 5 && totalScore <= 6) result = results.defaultMid;
+          else if (totalScore >= 7 && totalScore <= 8) result = results.defaultHigh;
+          else if (totalScore >= 9) result = results.highest;
+          else result = {
+            title: 'Недостаточно данных',
+            text: 'Пожалуйста, ответьте на все вопросы.'
+          };
+        }
+
+        resultTitle.textContent = result.title;
+        resultText.textContent = result.text;
+        resultBox.style.display = 'block';
+      }
+    });
+  });
   </script>
   <script>
   document.querySelectorAll('.feedbacks__toggle').forEach(button => {
