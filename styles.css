@@ -622,6 +622,7 @@ header {
     border: 1px solid var(--main-color);
     margin-bottom: 20px;
     max-width: 400px;
+    height: 220px;
 }
 
 .about-me__value:last-child {
