@@ -1378,6 +1378,10 @@ footer {
         width: 300px
     }
 
+    .header-row {
+        display: none;
+    }
+
     .intro {
         padding-bottom: 48px;
     }
