@@ -1780,6 +1780,10 @@ footer {
         width: 720px
     }
 
+    .header-row {
+        display: block;
+    }
+
     .row {
         flex-wrap: wrap;
     }
