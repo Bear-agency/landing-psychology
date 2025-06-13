@@ -866,7 +866,7 @@ input, button {
 
 .certificate-carousel > .slick-prev {
     left: 69% !important;
-    top: 87.6% !important;
+    top: 366px !important;
     height: 28px !important;
     width: 28px !important;
     background: var(--white-color) !important;
@@ -882,7 +882,7 @@ input, button {
 
 .certificate-carousel > .slick-next {
     left: 72% !important;
-    top: 90.7% !important;
+    top: 380px !important;
     height: 28px !important;
     width: 28px !important;
     background: var(--white-color) !important;
@@ -1117,7 +1117,7 @@ input, button {
 
 .feedbacks__carousel > .slick-prev {
     left: 94% !important;
-    top: -21% !important;
+    top: -54px !important;
     height: 28px !important;
     width: 28px !important;
     background: var(--white-color) !important;
@@ -1133,7 +1133,7 @@ input, button {
 
 .feedbacks__carousel > .slick-next {
     right: 0% !important;
-    top: -16.7% !important;
+    top: -40px !important;
     height: 28px !important;
     width: 28px !important;
     background: var(--white-color) !important;
@@ -1783,6 +1783,16 @@ footer {
         width: 100%;
     }
 
+     .certificate-carousel > .slick-prev {
+        left: 40% !important;
+        top: 710px !important;
+    }
+
+    .certificate-carousel > .slick-next {
+        left: 52% !important;
+        top: 724px !important;
+    }
+
     .results__item {
         padding: 20px 24px;
     }
@@ -1823,9 +1833,29 @@ footer {
         margin-bottom: 20px;
     }
 
-    .feedbacks__carousel-item {
-        width: 300px !important;
+    .feedbacks__carousel {
+        height: 290px !important;
     }
+
+    .feedbacks__carousel-item {
+        /* width: 300px !important; */
+        height: 280px !important;
+    }
+
+     .feedbacks__carousel > .slick-prev {
+        left: 40% !important;
+        top: 300px !important;
+    }
+
+    .feedbacks__carousel > .slick-next {
+        left: 51% !important;
+        top: 314px !important;
+    }
+
+    .feedbacks__author-row {
+        width: 70%;
+    }
+
 
     .format-pricing__title {
         font-size: 50px;
@@ -1954,6 +1984,15 @@ footer {
         flex-wrap: wrap;
     }
 
+    .header__nav,
+  .header__button {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
     .quiz-test__titles {
         width: 100%;
         height: inherit;
@@ -2011,6 +2050,16 @@ footer {
 
     .course-message__text > p {
         text-indent: 0%;
+    }
+
+    .certificate-carousel > .slick-prev {
+        left: 46% !important;
+        top: 810px !important;
+    }
+
+    .certificate-carousel > .slick-next {
+        left: 51% !important;
+        top: 824px !important;
     }
 
     .program {
@@ -2114,6 +2163,16 @@ footer {
         text-align: center;
     }
 
+    .feedbacks__carousel > .slick-prev {
+        left: 46% !important;
+        top: 220px !important;
+    }
+
+    .feedbacks__carousel > .slick-next {
+        left: 51% !important;
+        top: 234px !important;
+    }
+
     .format-pricing__title {
         font-size: 50px;
         font-weight: 500;
@@ -2180,6 +2239,19 @@ footer {
     .wrapper {
         width: 1000px
     }
+
+    .header__nav,
+  .header__button {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .aboutCourse__content > h2, .course-message__text > h2 {
+    font-size: 50px;
+  }
 
     .quiz-test__titles > h2 {
         font-size: 42px;
