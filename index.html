@@ -12,59 +12,47 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
-<style>
-
-    .quiz-step {
-      margin-bottom: 30px;
-      display: none;
-    }
-
-    .quiz-step.active {
-      display: block;
-    }
-
-    .quiz-step p {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .quiz-result {
-      padding: 20px;
-      background-color: #dbeaf5;
-      border-left: 5px solid #3498db;
-      display: none;
-      font-size: 18px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-  </style>
- <!-- подключение стилей -->
 </head>
 <body>
   <header class="site-header">
-    <div class="wrapper">
-        <div class="row items-center">
-        <div class="header__logo">
-            <img src="./img/header-logo.svg" alt="Site logo">
-        </div>
-        <nav class="header__nav">
-            <ul class="row header-row">
-                <li><a href="#">Главная</a></li>
-                <li><a href="#">Про курс</a></li>
-                <li><a href="#">Об авторе</a></li>
-                <li><a href="#">Отзывы</a></li>
-                <li><a href="#">Частые вопросы</a></li>
-            </ul>
-        </nav>
-        <button class="header__button">Записаться<i class="fa-solid fa-arrow-right header__button-icon"></i></button>
+  <div class="wrapper">
+    <div class="row items-center space-between">
+      <div class="header__logo">
+        <img src="./img/header-logo.svg" alt="Site logo">
+      </div>
+
+      <nav class="header__nav">
+        <ul class="row header-row">
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">Про курс</a></li>
+          <li><a href="#">Об авторе</a></li>
+          <li><a href="#">Отзывы</a></li>
+          <li><a href="#">Частые вопросы</a></li>
+        </ul>
+      </nav>
+
+      <button class="header__button">Записаться<i class="fa-solid fa-arrow-right header__button-icon"></i></button>
+
+      <!-- Burger Icon -->
+      <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
-    </div>
-  </header>
+    <!-- Fullscreen Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">Про курс</a></li>
+      <li><a href="#">Об авторе</a></li>
+      <li><a href="#">Отзывы</a></li>
+      <li><a href="#">Частые вопросы</a></li>
+    </ul>
+    <button class="header__button-mobile">Записаться<i class="fa-solid fa-arrow-right header__button-icon"></i></button>
+  </div>
+  </div>
+</header>
   <section class="intro">
     <div class="wrapper">
         <div class="column">
@@ -85,44 +73,46 @@
   </section>
   <section class="quiz-test">
     <div class="wrapper quiz-test__wrapper">
-        <div class="row">
+        <div class="row" id="quiz-test__row">
             <div class="column quiz-test__titles">
                 <h2>Какая скрытая программа мешает вам быть счастливой в отношениях?</h2>
                 <p>Ответьте на эти три вопроса и узнайте, какой сценарий отношений вы проживаете</p>
             </div>
-            <div class="column quiz-test__questions content-between">
-                <!-- <p>Как обычно начинаются ваши отношения?</p>
-                <button class="quiz-test__button">А) Стремительно и страстно — часто теряю голову</button>
-                <button class="quiz-test__button">Б) Осторожно, долго присматриваюсь — боюсь снова ошибиться</button>
-                <button class="quiz-test__button">В) Незаметно втягиваюсь — партнёр выбирает меня, а не я его</button> -->
-                <form id="quizForm">
-                    <div class="quiz-step active" data-step="1">
-                        <p>Как обычно начинаются ваши отношения?</p>
-                        <label class="quiz-test__button"><input type="radio" name="q1" value="A" data-score="1" class="quiz-test__button"> A) Стремительно и страстно</label>
-                        <label class="quiz-test__button"><input type="radio" name="q1" value="B" data-score="2" class="quiz-test__button"> B) Осторожно и долго</label>
-                        <label class="quiz-test__button"><input type="radio" name="q1" value="C" data-score="3"> C) Незаметно втягиваюсь</label>
+            <div class="column quiz-test__questions">
+                <form id="quizForm" class="column content-between">
+                    <div class="quiz-step active column content-between" data-step="1">
+                        <p class="quiz-step__title">Как обычно начинаются ваши отношения?</p>
+                        <label class="quiz-step__button"><input type="radio" name="q1" value="A" data-score="1"> A) Стремительно и страстно</label>
+                        <label class="quiz-step__button"><input type="radio" name="q1" value="B" data-score="2"> B) Осторожно и долго</label>
+                        <label class="quiz-step__button"><input type="radio" name="q1" value="C" data-score="3"> C) Незаметно втягиваюсь</label>
                     </div>
 
-                    <div class="quiz-step" data-step="2">
-                        <p>Как вы проявляете чувства?</p>
-                        <label class="quiz-test__button"><input type="radio" name="q2" value="A" data-score="1"> A) Очень открыто</label>
-                        <label class="quiz-test__button"><input type="radio" name="q2" value="B" data-score="2"> B) Сдержанно</label>
-                        <label class="quiz-test__button"><input type="radio" name="q2" value="C" data-score="3"> C) Завишу от партнёра</label>
+                    <div class="quiz-step column content-between" data-step="2">
+                        <p class="quiz-step__title">Как вы проявляете чувства?</p>
+                        <label class="quiz-step__button"><input type="radio" name="q2" value="A" data-score="1"> A) Очень открыто</label>
+                        <label class="quiz-step__button"><input type="radio" name="q2" value="B" data-score="2"> B) Сдержанно</label>
+                        <label class="quiz-step__button"><input type="radio" name="q2" value="C" data-score="3"> C) Завишу от партнёра</label>
                     </div>
 
-                    <div class="quiz-step" data-step="3">
-                        <p>Что вы чаще чувствуете в отношениях?</p>
-                        <label class="quiz-test__button"><input type="radio" name="q3" value="A" data-score="1"> A) Восторг и драйв</label>
-                        <label class="quiz-test__button"><input type="radio" name="q3" value="B" data-score="2"> B) Напряжение и тревогу</label>
-                        <label class="quiz-test__button"><input type="radio" name="q3" value="C" data-score="3"> C) Сомнения и неуверенность</label>
+                    <div class="quiz-step column content-between" data-step="3">
+                        <p class="quiz-step__title">Что вы чаще чувствуете в отношениях?</p>
+                        <label class="quiz-step__button"><input type="radio" name="q3" value="A" data-score="1"> A) Восторг и драйв</label>
+                        <label class="quiz-step__button"><input type="radio" name="q3" value="B" data-score="2"> B) Напряжение и тревогу</label>
+                        <label class="quiz-step__button"><input type="radio" name="q3" value="C" data-score="3"> C) Сомнения и неуверенность</label>
                     </div>
                 </form>
-                <div id="quizResult" class="row quiz-result" style="display: none;">
-                    <h2 id="quizResultTitle"></h2>
-                    <p id="quizResultText"></p>
-                </div>
             </div>
         </div>
+        <div id="quiz-result" class="row quiz-result" style="display: none;">
+            <div class="quiz-result__image">
+                <img src="./img/illustration.png" alt="">
+            </div>
+            <div class="column quiz-result__content">
+                <div>
+                    <h2 id="quiz-result__title"></h2>
+                    <p id="quiz-result__text"></p>
+                </div>
+            </div>
         </div>
     </section>
     <section class="eligibility">
@@ -950,9 +940,10 @@
   let currentStep = 1;
 
   const steps = document.querySelectorAll('.quiz-step');
-  const resultBox = document.getElementById('quizResult');
-  const resultTitle = document.getElementById('quizResultTitle');
-  const resultText = document.getElementById('quizResultText');
+  const resultBox = document.getElementById('quiz-result');
+  const resultTitle = document.getElementById('quiz-result__title');
+  const resultText = document.getElementById('quiz-result__text');
+  const quizRow = document.getElementById('quiz-test__row');
 
   document.querySelectorAll('.quiz-step input[type="radio"]').forEach(input => {
     input.addEventListener('change', () => {
@@ -988,9 +979,18 @@
 
         resultTitle.textContent = result.title;
         resultText.textContent = result.text;
-        resultBox.style.display = 'block';
+        quizRow.style.display = 'none';
+        resultBox.style.display = 'flex';
       }
     });
+  });
+
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    mobileMenu.classList.toggle('show');
   });
   </script>
   <script>

@@ -130,12 +130,18 @@ input, button {
 
 /* Header */
 
-header {
+.site-header {
     background-color: var(--main-background-color);
     padding: 25px 40px;
+    display: flex;
 }
 
-.header__button {
+.header__logo > img {
+    width: 100%;
+    height: auto;
+}
+
+.header__button, .header__button-mobile {
     border: 1px solid var(--main-color);
     border-radius: 10px;
     padding: 10px 50px;
@@ -164,6 +170,79 @@ header {
 .header-row > li:last-child {
     margin-right: 0;
 }
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+  z-index: 1001;
+}
+
+.burger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: 0.3s;
+  transform-origin: center;
+}
+
+/* Animate burger into X */
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Fullscreen mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  background: var(--main-background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.mobile-menu.show {
+  left: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.mobile-menu li {
+    margin-bottom: 20px;
+}
+
+.mobile-menu a {
+  font-size: 22px;
+    font-weight: 400;
+    color: var(--black-color);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+  text-decoration: none;
+}
+
 
 /* Intro */
 
@@ -213,7 +292,7 @@ header {
 .intro__button {
     border: none;
     border-radius: 10px;
-    padding: 20px 200px;
+    padding: 20px 20px;
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-weight: 600;
@@ -270,7 +349,21 @@ header {
     width: 50%;
 }
 
-.quiz-test__questions > p {
+.quiz-step {
+      display: none;
+    }
+
+    .quiz-step.active {
+      display: flex;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+.quiz-step__title {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-optical-sizing: auto;
@@ -281,7 +374,7 @@ header {
     margin-bottom: 32px;
 }
 
-.quiz-test__button {
+.quiz-step__button {
     border: none;
     border-radius: 10px;
     padding: 16px 20px;
@@ -296,8 +389,45 @@ header {
     margin-bottom: 16px;
 }
 
-.quiz-test__button:last-of-type {
+.quiz-step__button:last-of-type {
     margin-bottom: 0;
+}
+
+.quiz-step__button > input[type="radio"] {
+    display: none;
+}
+
+.quiz-result__image {
+    width: 35%;
+}
+
+.quiz-result__image > img {
+    width: 100%;
+    height: auto;
+}
+
+.quiz-result__content {
+     width: 50%;
+     display: flex;
+     justify-content: center;
+}
+
+#quiz-result__title {
+    color: var(--main-color);
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#quiz-result__text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
 }
 
 /*  Eligibility */
@@ -1378,8 +1508,21 @@ footer {
         width: 300px
     }
 
-    .header-row {
-        display: none;
+     .header__nav,
+  .header__button {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+    .site-header {
+        padding: 25px 20px;
+    }
+
+    .header__logo {
+        width: 60%;
     }
 
     .intro {
@@ -1431,6 +1574,29 @@ footer {
     .quiz-test__wrapper {
         padding: 24px;
     }
+
+    .quiz-result {
+        height: fit-content;
+    }
+
+    .quiz-result__image {
+        width: 100%;
+    }
+
+    .quiz-result__content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .quiz-step__button {
+        padding: 16px 13px;
+    }
+
+    #quiz-result__title {
+        font-size: 32px;
+    }
+
 
     .eligibility {
         padding-bottom: 64px;
@@ -1721,6 +1887,10 @@ footer {
         width: 10%;
     }
 
+    .faq__answer > p {
+        width: 100%;
+    }
+
     .course-result {
         padding-bottom: 64px;
     }
@@ -1778,10 +1948,6 @@ footer {
 @media (min-width: 768px) and (max-width: 1023px) {
     .wrapper {
         width: 720px
-    }
-
-    .header-row {
-        display: block;
     }
 
     .row {
@@ -2013,6 +2179,10 @@ footer {
 @media (min-width: 1024px) and (max-width: 1439px) {
     .wrapper {
         width: 1000px
+    }
+
+    .quiz-test__titles > h2 {
+        font-size: 42px;
     }
 
     .about-me__value {
